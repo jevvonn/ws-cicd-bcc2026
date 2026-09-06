@@ -17,7 +17,7 @@ type TodoHandler struct {
 func NewTodoHandler(router fiber.Router, todoUsecase usecase.TodoUsecase) {
 	h := &TodoHandler{usecase: todoUsecase}
 
-	todos := router.Group("/todos")
+	todos := router.Group("/todo")
 	todos.Post("/", h.Create)
 	todos.Get("/", h.GetAll)
 	todos.Get("/:id", h.GetByID)
