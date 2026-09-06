@@ -11,7 +11,7 @@ import (
 
 func registerRoutes(app *fiber.App, db *gorm.DB) {
 	app.Get("/", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{"message": "Hello, welcome to the API"})
+		return c.JSON(fiber.Map{"message": "Hello, welcome to the API of ws-cicd-bcc2026!"})
 	})
 
 	app.Get("/hello", func(c *fiber.Ctx) error {
